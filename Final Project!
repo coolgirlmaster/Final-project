@@ -1,0 +1,50 @@
+class Calculator:
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+  
+  def add(self):
+    return self.x + self.y
+  
+  def subtract(self):
+    return self.x - self.y
+  
+  def multiply(self):
+    return self.x * self.y
+  
+  def divide(self):
+    return self.x / self.y
+
+
+  def square_root(self):
+    return self.x ** (1 / self.y)
+
+userInputAction = input
+("Welcome to Emily's basic calculatorhere is a list of all the choices: \
+1. Add \
+2. Subtract \
+3. Multiply \
+4. Divide \
+5. Square Root \n")
+
+userInput1 = int(input("Enter the first number: "))
+
+userInput2 = int(input("Enter the second number: "))
+
+cal = Calculator(x = userInput1, y=userInput2)
+
+match userInputAction:
+  case "1":
+    print(cal.add())
+  
+  case "2":
+    print(cal.subtract())
+  
+  case "3":
+    print(cal.multiply())
+  
+  case "4":
+    print(cal.divide())
+  
+  case "5":
+    print(cal.square_root())
